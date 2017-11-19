@@ -27,6 +27,6 @@ allprojects {
 Then add dependency:
 ```
 dependencies {
-    implements 'com.github.jblejder:FragmentNavigation:VERSION'
+    implementation 'com.github.jblejder:FragmentNavigation:VERSION'
 }
 ```
