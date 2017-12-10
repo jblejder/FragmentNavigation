@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 
 public abstract class TransactionOptions {
 
-    private TransactionOptions() {
+    protected TransactionOptions() {
     }
 
     public abstract void applyTransactionType(FragmentTransaction transaction,
