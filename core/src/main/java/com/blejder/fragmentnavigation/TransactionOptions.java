@@ -2,6 +2,7 @@ package com.blejder.fragmentnavigation;
 
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 public abstract class TransactionOptions {
@@ -9,7 +10,8 @@ public abstract class TransactionOptions {
     protected TransactionOptions() {
     }
 
-    public abstract void applyTransactionType(FragmentTransaction transaction,
+    public abstract void applyTransactionType(FragmentManager fragmentManager,
+                                              FragmentTransaction transaction,
                                               int containerViewId,
                                               Fragment fragment);
 
@@ -25,7 +27,7 @@ public abstract class TransactionOptions {
     public static class AddToBackStack extends TransactionOptions {
 
         @Override
-        public void applyTransactionType(FragmentTransaction transaction, int containerViewId, Fragment fragment) {
+        public void applyTransactionType(FragmentManager fragmentManager, FragmentTransaction transaction, int containerViewId, Fragment fragment) {
             transaction.add(containerViewId, fragment);
             transaction.addToBackStack(null);
         }
@@ -34,7 +36,7 @@ public abstract class TransactionOptions {
     public static class Replace extends TransactionOptions {
 
         @Override
-        public void applyTransactionType(FragmentTransaction transaction, int containerViewId, Fragment fragment) {
+        public void applyTransactionType(FragmentManager fragmentManager, FragmentTransaction transaction, int containerViewId, Fragment fragment) {
             transaction.replace(containerViewId, fragment);
         }
     }

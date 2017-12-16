@@ -48,7 +48,7 @@ public abstract class BranchFragment extends Fragment {
         if (prevFragment != null) {
             tr.hide(prevFragment);
         }
-        options.applyTransactionType(tr, getContainerId(), fragment);
+        options.applyTransactionType(fm, tr, getContainerId(), fragment);
         tr.setPrimaryNavigationFragment(fragment);
         tr.commit();
     }
