@@ -5,7 +5,7 @@ Library that provides nice abstraction over fragment managed navigation. Gives p
 
 ## Usage in shorten 
 
-Library provides 2 main classes `BranchFragment` that is kind of root fragment which pourpose is to store other nested fragments and `BranchFragment` that should contain your logic and have some build in function to help using this library. 
+Library provides 2 main classes `BranchFragment` that is kind of root fragment which pourpose is to store other nested fragments and `LeafFragment` that should contain your logic and have some build in function to help using this library. 
 
 ## Example
 
